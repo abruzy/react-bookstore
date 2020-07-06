@@ -1,3 +1,4 @@
+/* eslint-disable quote-props */
 module.exports = {
   purge: [],
   target: 'relaxed',
@@ -724,4 +725,4 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [],
-}
+};
