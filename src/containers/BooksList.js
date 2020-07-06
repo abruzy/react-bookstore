@@ -8,9 +8,10 @@ const BooksList = ({ books }) => (
     <table className="table-auto mb-20">
       <thead>
         <tr>
-          <th className="px-4 py-2"> BOOK ID</th>
-          <th className="px-4 py-2">TITLE</th>
-          <th className="px-4 py-2">CATEGORY</th>
+          <th className="px-4 py-2"> Book ID</th>
+          <th className="px-4 py-2">Title</th>
+          <th className="px-4 py-2">Category</th>
+          <th className="px-4 py-2">Remove Book</th>
         </tr>
       </thead>
       <tbody>
