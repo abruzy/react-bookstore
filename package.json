@@ -41,6 +41,9 @@
     "eslint-plugin-import": "2.20.x",
     "eslint-plugin-jsx-a11y": "6.2.x",
     "eslint-plugin-react": "7.20.x",
-    "eslint-plugin-react-hooks": "2.5.x"
+    "eslint-plugin-react-hooks": "2.5.x",
+    "stylelint": "13.3.x",
+    "stylelint-config-standard": "20.0.x",
+    "stylelint-scss": "3.17.x"
   }
 }
