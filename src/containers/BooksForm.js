@@ -17,13 +17,13 @@ class BooksForm extends React.Component {
   }
 
   handleChange(event) {
-    const name = event.target.name,
+    const { name } = event.target;
 
     this.setState({
       title: event.target.value,
       category: event.target.value,
       [name]: event.target.value,
-    })
+    });
   }
 
   handleSubmit(event) {
