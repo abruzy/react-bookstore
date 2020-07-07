@@ -13,19 +13,16 @@ class BooksForm extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleCategory = this.handleCategory.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({
-      title: event.target.value,
-    });
-  }
+    const target = event.target,
+    const value = target.name,
+    const name = target.name;
 
-  handleCategory(event) {
     this.setState({
-      category: event.target.value,
+      [name]: value
     });
   }
 
@@ -73,7 +70,7 @@ class BooksForm extends React.Component {
               Category:
             </label>
 
-            <select className="flex ml-5 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="cat" value={category} onChange={this.handleCategory}>
+            <select className="flex ml-5 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="cat" value={category} onChange={this.handleChange}>
               {categories.map(cat => (
                 <option key={cat} value={cat}>
                   {' '}
