@@ -21,6 +21,7 @@ class BooksForm extends React.Component {
 
     this.setState({
       title: event.target.value,
+      category: event.target.value,
       [name]: event.target.value,
     })
   }
