@@ -18,14 +18,11 @@ class BooksForm extends React.Component {
   }
 
   handleChange(event) {
-    const { name } = event.target;
-
+    const { name, value } = event.target;
     this.setState({
-      title: event.target.value,
-      category: event.target.value,
-      [name]: event.target.value,
+      [name]: value,
     });
-  }
+  };
 
   handleSubmit(event) {
     event.preventDefault();
@@ -57,21 +54,21 @@ class BooksForm extends React.Component {
       <form className="w-full max-w-sm" onSubmit={this.handleSubmit}>
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
-            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="booktitle">
+            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="title">
               {' '}
               Book Title:
             </label>
           </div>
           <div className="md:w-2/3">
-            <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="booktitle" id="booktitle" value={title} onChange={this.handleChange} />
+            <input className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text" name="title" id="title" value={title} onChange={this.handleChange} />
           </div>
           <div className="relative">
-            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="cat">
+            <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="category">
               {' '}
               Category:
             </label>
 
-            <select className="flex ml-5 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="cat" value={category} onChange={this.handleChange}>
+            <select className="flex ml-5 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="category" value={category} onChange={this.handleChange}>
               {categories.map(cat => (
                 <option key={cat} value={cat}>
                   {' '}
