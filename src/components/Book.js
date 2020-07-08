@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = ({ book }) => (
+const Book = ({ book, handleRemoveBook }) => (
   <tr>
     <td className="border px-4 py-2">
       {' '}
@@ -18,6 +18,10 @@ const Book = ({ book }) => (
       {book.category}
       {' '}
     </td>
+    <td className="border px-4 py-2">
+      {' '}
+      <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" type="button" onClick={() => handleRemoveBook(book)}>Delete</button>
+    </td>
   </tr>
 );
 
@@ -27,6 +31,7 @@ Book.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
   }).isRequired,
+  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;
