@@ -8,4 +8,9 @@ const REMOVE_BOOK = book => ({
   book,
 });
 
-export { CREATE_BOOK, REMOVE_BOOK };
+const CHANGE_FILTER = filter => ({
+  type: 'CHANGE FILTER',
+  filter,
+});
+
+export { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER };
