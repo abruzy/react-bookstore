@@ -1,11 +1,15 @@
-const CREATE_BOOK = book => ({
+import randomId from '../utils/randomId';
+
+const CREATE_BOOK = (title, category) => ({
   type: 'CREATE BOOK',
-  book,
+  id: randomId(),
+  title,
+  category,
 });
 
-const REMOVE_BOOK = book => ({
+const REMOVE_BOOK = id => ({
   type: 'REMOVE BOOK',
-  book,
+  id,
 });
 
 const CHANGE_FILTER = filter => ({
