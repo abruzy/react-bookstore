@@ -1,10 +1,6 @@
-import randomId from '../utils/randomId';
-
-const CREATE_BOOK = (title, category) => ({
+const CREATE_BOOK = book => ({
   type: 'CREATE BOOK',
-  id: randomId(),
-  title,
-  category,
+  book,
 });
 
 const REMOVE_BOOK = id => ({

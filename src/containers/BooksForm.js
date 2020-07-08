@@ -32,8 +32,15 @@ class BooksForm extends React.Component {
     const { title, category } = this.state;
     const { addBook } = this.props;
 
-    if (title && category) {
-      addBook(title, category);
+    const book = {
+      id: Math.floor(Math.random() * 100),
+      title,
+      category,
+    };
+
+    if (title !== '' && category !== '') {
+      addBook(book);
+
       this.setState({
         title: '',
         category: '',
@@ -67,7 +74,9 @@ class BooksForm extends React.Component {
             <select className="flex ml-5 appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="cat" value={category} onChange={this.handleChange}>
               {categories.map(cat => (
                 <option key={cat} value={cat}>
+                  {' '}
                   {cat}
+                  {' '}
                 </option>
               ))}
             </select>
@@ -84,7 +93,7 @@ BooksForm.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  addBook: (title, category) => dispatch(CREATE_BOOK(title, category)),
+  addBook: book => dispatch(CREATE_BOOK(book)),
 });
 
 export default connect(null, mapDispatchToProps)(BooksForm);
