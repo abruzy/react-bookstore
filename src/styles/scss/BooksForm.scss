@@ -1,0 +1,144 @@
+.heading {
+  width: 174px;
+  height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+  margin-left: 20rem;
+}
+
+form {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  & div {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+  }
+
+  .input-title {
+    width: 664px;
+    height: 45px;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+    padding: 13px 17px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .input-category {
+    width: 285px;
+    height: 45px;
+    border-radius: 4px;
+    border: solid 1px #e8e8e8;
+    background-color: #fff;
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: semi-bold;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .submit-button {
+    font-family: 'Roboto Slab', serif;
+    width: 184px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #0290ff;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    margin-left: 34px;
+    cursor: pointer;
+  }
+}
+
+/*** Mobile View ***/
+
+@media only screen and (max-width: 600px) {
+  .books-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .input-title {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .input-category {
+      width: 100%;
+      margin: 0;
+    }
+
+    .submit-button {
+      margin-left: 5px;
+      margin-top: 15px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .heading {
+      margin: 8px 0 0 10px;
+    }
+  }
+}
+
+/*** Tablet View ***/
+
+@media only screen and (max-width: 768px) {
+  .books-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      margin-left: 15px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .input-title {
+      width: 98%;
+      margin-bottom: 20px;
+    }
+
+    .input-category {
+      width: 98%;
+      margin-left: 0;
+    }
+
+    .submit-button {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}

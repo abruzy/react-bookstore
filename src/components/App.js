@@ -1,12 +1,12 @@
 import React from 'react';
-import '../styles/main.css';
+import '../styles/scss/App.scss';
 
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 
 function App() {
   return (
-    <div className="App block w-6/12 mt-10 m-auto">
+    <div className="panel-bg">
       <BooksList />
       <BooksForm />
     </div>

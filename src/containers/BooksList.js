@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { REMOVE_BOOK, CHANGE_FILTER } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import '../styles/scss/BooksList.scss';
 
 const filteredBooks = (books, filter) => {
   if (filter === 'All') {
@@ -13,33 +14,35 @@ const filteredBooks = (books, filter) => {
 };
 
 const BooksList = ({
-  books, filter, handleRemoveBook, handleFilterChange,
-}) => (
-  <div className="books-list">
-    <table className="table-auto mb-20">
-      <thead>
-        <tr>
-          <th className="px-4 py-2"> Book ID</th>
-          <th className="px-4 py-2">Title</th>
-          <th className="px-4 py-2">Category</th>
-          <th className="px-4 py-2">Remove Book</th>
-        </tr>
-      </thead>
-      <tbody>
+  books, filter, removeBook, changeFilter,
+}) => {
+  const handleFilterChange = event => {
+    const { value } = event.target;
+    changeFilter(value);
+  };
+
+  return (
+    <div className="book-list">
+      <div className="header">
+        <div className="header-title">Bookstore CMS</div>
+        <div className="category-container">
+          <CategoryFilter handleChange={handleFilterChange} />
+        </div>
+      </div>
+      <div className="books-container">
         {filteredBooks(books, filter).map(book => (
-          <Book key={book.title} book={book} handleRemoveBook={handleRemoveBook} />
+          <Book key={book.title} book={book} removeBook={removeBook} />
         ))}
-      </tbody>
-    </table>
-    <CategoryFilter handleFilterChange={handleFilterChange} />
-  </div>
-);
+      </div>
+    </div>
+  );
+};
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
   filter: PropTypes.string.isRequired,
-  handleRemoveBook: PropTypes.func.isRequired,
-  handleFilterChange: PropTypes.func.isRequired,
+  removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -48,8 +51,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleRemoveBook: book => { dispatch(REMOVE_BOOK(book)); },
-  handleFilterChange: e => dispatch(CHANGE_FILTER(e)),
+  removeBook: id => dispatch(REMOVE_BOOK(id)),
+  changeFilter: value => dispatch(CHANGE_FILTER(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps, null)(BooksList);

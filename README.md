@@ -6,9 +6,9 @@
   </a>
 </p>
 
-> A Simple Bookstore App built using React, this will be adjust has I complete each milestone
+> A Simple Bookstore App built using React and using redux for state managemnt. This app can perform simple CRUD functionalities like Add book, Delete a book and Filter base on the category
 
-<!-- ![Calculator](./react-calculator.png) -->
+![BookStore CMS](./bookstore.png)
 
 ## Built With
 
