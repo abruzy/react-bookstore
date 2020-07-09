@@ -63,5 +63,21 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    // height: 170px;
+    padding: 10px 2%;
+
+    .title {
+      width: 100%;
+    }
+
+    .category {
+      margin-right: auto;
+      width: 20%;
+    }
+
+    .delete-button {
+      margin-right: auto;
+      width: 100px;
+    }
   }
 }
