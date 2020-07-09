@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-state */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -54,7 +53,6 @@ class BooksForm extends React.Component {
 
     return (
       <div className="books-form">
-        {/* <hr /> */}
         <h1 className="heading">ADD NEW BOOK</h1>
         <form onSubmit={this.handleSubmit}>
           <input type="text" className="input-title" placeholder="Enter a book title" name="title" id="title" value={title} onChange={this.handleChange} />
