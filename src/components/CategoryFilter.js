@@ -5,7 +5,7 @@ import '../styles/scss/CategoryFilter.scss';
 const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const CategoryFilter = ({ handleChange }) => (
-  <div className="flex">
+  <div className="category-filter">
     <label className="category-label" htmlFor="cat">
       {' '}
       Filter By Category:

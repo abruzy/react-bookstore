@@ -14,7 +14,7 @@ form {
     height: 35px;
     border-radius: 4px;
     border: solid 1px #e8e8e8;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 3px 6px;
     font-size: 1rem;
     margin: 0 10px;
@@ -29,7 +29,7 @@ form {
     height: 45px;
     border-radius: 4px;
     border: solid 1px #e8e8e8;
-    background-color: #ffffff;
+    background-color: #fff;
     margin-right: 3rem;
 
     &:focus {
@@ -38,7 +38,7 @@ form {
   }
 
   .submit-button {
-    font-family: RobotoSlab;
+    font-family: 'Roboto Slab', serif;
     font-size: 13px;
     font-weight: bold;
     font-stretch: normal;
@@ -46,13 +46,12 @@ form {
     line-height: normal;
     letter-spacing: 0.5px;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     width: 184px;
     height: 45px;
     border: none;
     border-radius: 3px;
     background-color: #0290ff;
     cursor: pointer;
-    // margin: 30px 0;
   }
 }

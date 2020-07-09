@@ -1,8 +1,12 @@
-.category-button{
+.category-label {
+  margin-right: 1.5em;
+}
+
+.category-button {
   height: 30px;
   width: 150px;;
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -15,8 +19,4 @@
   &:focus {
     outline: none;
   }
-}
-
-.category-label {
-  margin-right: 1.5em;
 }
