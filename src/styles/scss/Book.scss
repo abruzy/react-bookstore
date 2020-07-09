@@ -87,3 +87,9 @@
     padding: 10px 2%;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .Lesson-Panel {
+    width: 100%;
+  }
+}
