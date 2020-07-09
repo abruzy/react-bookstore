@@ -77,6 +77,8 @@ form {
   }
 }
 
+/*** Mobile View ***/
+
 @media only screen and (max-width: 600px) {
   .books-form {
     width: 100%;
@@ -104,6 +106,34 @@ form {
 
     .heading {
       margin: 8px 0 0 10px;
+    }
+  }
+}
+
+/*** Tablet View ***/
+
+@media only screen and (max-width: 768px) {
+  .books-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      margin-left: 15px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .input-title {
+      margin-left: 15px;
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .input-category {
+      margin-left: 15px;
     }
   }
 }
