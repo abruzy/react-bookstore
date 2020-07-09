@@ -29,7 +29,7 @@ const BooksList = ({
           <CategoryFilter handleChange={handleFilterChange} />
         </div>
       </div>
-      <div>
+      <div className="books-container">
         {filteredBooks(books, filter).map(book => (
           <Book key={book.title} book={book} removeBook={removeBook} />
         ))}
