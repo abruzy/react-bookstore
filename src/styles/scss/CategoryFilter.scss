@@ -1,0 +1,36 @@
+.category-filter {
+  .category-label {
+    margin-right: 1.5em;
+  }
+
+  .category-button {
+    height: 30px;
+    width: 150px;
+    opacity: 0.5;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.9px;
+    padding: 2px 3px;
+    color: #121212;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .category-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .category-label {
+      margin-right: 1rem;
+    }
+  }
+}
