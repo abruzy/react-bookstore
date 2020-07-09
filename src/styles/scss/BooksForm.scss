@@ -1,7 +1,22 @@
+.heading {
+  width: 174px;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+  margin-left: 20rem;
+}
+
 form {
-  padding: 30px 100px;
-  width: 70%;
+  // padding: 30px 100px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 30px 0;
 
   & div {
     display: flex;
@@ -11,13 +26,18 @@ form {
   }
 
   .input-title {
-    width: 354px;
+    width: 664px;
+    height: 45px;
     border-radius: 4px;
     border: solid 1px #e8e8e8;
-    background-color: #fff;
-    padding: 11px 13px;
-    font-size: 1rem;
-    margin: 0 10px;
+    background-color: #ffffff;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    font-size: 16px;
+    letter-spacing: -0.15px;
+    color: #c4c4c4;
+    padding: 13px 17px;
 
     &:focus {
       outline: none;
@@ -29,8 +49,10 @@ form {
     height: 45px;
     border-radius: 4px;
     border: solid 1px #e8e8e8;
-    background-color: #fff;
-    margin-right: 3rem;
+    background-color: #ffffff;
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: semi-bold;
 
     &:focus {
       outline: none;
@@ -39,19 +61,39 @@ form {
 
   .submit-button {
     font-family: 'Roboto Slab', serif;
-    font-size: 13px;
+    width: 184px;
+    height: 45px;
+    border-radius: 3px;
+    background-color: #0290ff;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.5px;
     text-align: center;
-    color: #fff;
-    width: 184px;
-    height: 45px;
+    color: #ffffff;
     border: none;
-    border-radius: 3px;
-    background-color: #0290ff;
+    margin-left: 34px;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .books-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .input-title {
+      width: 50%;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .heading {
+      margin: 0;
+    }
   }
 }

@@ -7,6 +7,7 @@
   height: 95px;
   background-color: #fff;
   cursor: pointer;
+  width: 100%;
 
   .header-title {
     font-family: 'Montserrat', sans-serif;
@@ -17,5 +18,14 @@
     line-height: normal;
     letter-spacing: normal;
     color: #0290ff;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding: 0 3%;
+  }
+  .header-title {
+    display: none;
   }
 }
