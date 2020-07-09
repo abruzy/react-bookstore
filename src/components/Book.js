@@ -1,31 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/scss/Book.scss';
+
 const Book = ({ book, removeBook }) => {
   const handleRemoveBook = () => removeBook(book.id);
 
   return (
-    <tr>
-      <td className="border px-4 py-2">
-        {' '}
-        {book.id}
-        {' '}
-      </td>
-      <td className="border px-4 py-2">
-        {' '}
-        {book.title}
-        {' '}
-      </td>
-      <td className="border px-4 py-2">
-        {' '}
-        {book.category}
-        {' '}
-      </td>
-      <td className="border px-4 py-2">
-        {' '}
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" type="button" onClick={handleRemoveBook}>Delete</button>
-      </td>
-    </tr>
+    <div className="Lesson-Panel">
+      <div className="title">{book.title}</div>
+      <div className="category">{book.category}</div>
+      <button type="button" className="delete-button" onClick={handleRemoveBook}>Remove Book</button>
+    </div>
   );
 };
 

@@ -1,0 +1,59 @@
+.Lesson-Panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto;
+  width: 1200px;
+  padding: 0 100px;
+  height: 170px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+
+  .title {
+    width: 50%;
+    font-family: RobotoSlab;
+    font-size: 22px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #121212;
+  }
+
+  .category {
+    right: 840px;
+    top: 372px;
+    width: 20%;
+    height: 18px;
+    opacity: 0.5;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #121212;
+  }
+
+  .delete-button {
+    width: 20%;
+    height: 33px;
+    border: none;
+    border-radius: 3px;
+    background-color: #0290ff;
+    font-family: RobotoSlab;
+    font-size: 13px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
