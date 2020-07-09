@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 import '../styles/scss/Book.scss';
 
 const Book = ({ book, removeBook }) => {
-  const handleRemoveBook = () => removeBook(book.id);
+  const handleRemoveBook = () => {
+    // eslint-disable-next-line no-alert
+    if (window.confirm('Are you sure you want to delete this book?')) {
+      removeBook(book.id);
+    }
+  };
 
   return (
     <div className="Lesson-Panel">
