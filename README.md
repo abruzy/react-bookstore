@@ -8,7 +8,7 @@
 
 > A Simple Bookstore App built using React and using redux for state managemnt. This app can perform simple CRUD functionalities like Add book, Delete a book and Filter base on the category
 
-![BookStore CMS](./bookstore.png)
+![BookStore CMS](./bookstore-app.png)
 
 ## Built With
 
